@@ -1,3 +1,4 @@
 schedule==1.2.1
 pyttsx3==2.90
-pandas==2.2.0 
+pandas==2.2.0
+flask==3.0.2 
