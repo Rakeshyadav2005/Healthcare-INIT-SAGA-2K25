@@ -7,6 +7,7 @@ import os
 import threading
 import platform
 from typing import Dict, List
+from pathlib import Path
 
 class MedicineReminder:
     def __init__(self):
@@ -31,27 +32,37 @@ class MedicineReminder:
             self.engine = None
 
         self.reminders: Dict[str, str] = {}
-        # Sample medicine prices (can be replaced with CSV data)
-        self.medicine_prices = {
-            "Paracetamol": {
-                "Pharmacy A": 10.99,
-                "Pharmacy B": 9.99,
-                "Pharmacy C": 11.50
-            },
-            "Ibuprofen": {
-                "Pharmacy A": 15.99,
-                "Pharmacy B": 14.50,
-                "Pharmacy C": 16.25
-            },
-            "Aspirin": {
-                "Pharmacy A": 8.99,
-                "Pharmacy B": 7.99,
-                "Pharmacy C": 9.25
-            }
-        }
+        # Initialize medicine prices from CSV
+        self.medicine_prices = self.load_medicine_prices()
         # Start the scheduler in a separate thread
         self.scheduler_thread = threading.Thread(target=self.run_scheduler, daemon=True)
         self.scheduler_thread.start()
+
+    def load_medicine_prices(self) -> Dict:
+        """Load medicine prices from CSV file."""
+        try:
+            csv_path = Path("medicine_prices.csv")
+            if not csv_path.exists():
+                print("Warning: medicine_prices.csv not found. Using empty price database.")
+                return {}
+            
+            df = pd.read_csv(csv_path)
+            # Convert DataFrame to nested dictionary
+            prices_dict = {}
+            for _, row in df.iterrows():
+                medicine = row['Medicine Name']
+                pharmacy = row['Pharmacy Name']
+                price = float(row['Price'])
+                
+                if medicine not in prices_dict:
+                    prices_dict[medicine] = {}
+                prices_dict[medicine][pharmacy] = price
+            
+            return prices_dict
+        except Exception as e:
+            print(f"Error loading medicine prices: {e}")
+            print("Using empty price database.")
+            return {}
 
     def validate_time_format(self, time_str: str) -> bool:
         """Validate if the time string is in correct format."""
@@ -133,6 +144,11 @@ class MedicineReminder:
 
     def compare_prices(self, medicine_name: str) -> None:
         """Compare prices of a medicine across different pharmacies."""
+        if not self.medicine_prices:
+            print("\nError: Medicine price database is not available.")
+            print("Please make sure medicine_prices.csv exists in the same directory.")
+            return
+
         if medicine_name in self.medicine_prices:
             print(f"\nPrice comparison for {medicine_name}:")
             print("-" * 40)
@@ -140,7 +156,12 @@ class MedicineReminder:
                 print(f"{pharmacy}: ${price:.2f}")
             print("-" * 40)
         else:
-            print(f"Medicine '{medicine_name}' not found in our database.")
+            print(f"\nMedicine '{medicine_name}' not found in our database.")
+            print("Available medicines:")
+            print("-" * 40)
+            for med in sorted(self.medicine_prices.keys()):
+                print(f"- {med}")
+            print("-" * 40)
 
     def run_scheduler(self) -> None:
         """Run the scheduler in a separate thread."""
