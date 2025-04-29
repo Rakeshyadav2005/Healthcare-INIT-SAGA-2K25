@@ -2,12 +2,50 @@ Medicine Name,Pharmacy Name,Price
 Paracetamol,Pharmacy A,10.99
 Paracetamol,Pharmacy B,9.99
 Paracetamol,Pharmacy C,11.50
+Paracetamol,MediMart,8.99
+Paracetamol,HealthPlus,10.25
 Ibuprofen,Pharmacy A,15.99
 Ibuprofen,Pharmacy B,14.50
 Ibuprofen,Pharmacy C,16.25
+Ibuprofen,MediMart,13.99
+Ibuprofen,HealthPlus,15.50
 Aspirin,Pharmacy A,8.99
 Aspirin,Pharmacy B,7.99
 Aspirin,Pharmacy C,9.25
+Aspirin,MediMart,7.49
+Aspirin,HealthPlus,8.75
 Amoxicillin,Pharmacy A,12.75
 Amoxicillin,Pharmacy B,11.99
-Amoxicillin,Pharmacy C,13.25 
+Amoxicillin,Pharmacy C,13.25
+Amoxicillin,MediMart,11.50
+Amoxicillin,HealthPlus,12.25
+Cetirizine,Pharmacy A,6.99
+Cetirizine,Pharmacy B,5.99
+Cetirizine,Pharmacy C,7.25
+Cetirizine,MediMart,5.49
+Cetirizine,HealthPlus,6.50
+Omeprazole,Pharmacy A,14.99
+Omeprazole,Pharmacy B,13.75
+Omeprazole,Pharmacy C,15.50
+Omeprazole,MediMart,12.99
+Omeprazole,HealthPlus,14.25
+Metformin,Pharmacy A,9.99
+Metformin,Pharmacy B,8.99
+Metformin,Pharmacy C,10.50
+Metformin,MediMart,8.49
+Metformin,HealthPlus,9.75
+Amlodipine,Pharmacy A,11.50
+Amlodipine,Pharmacy B,10.75
+Amlodipine,Pharmacy C,12.25
+Amlodipine,MediMart,10.25
+Amlodipine,HealthPlus,11.99
+Atorvastatin,Pharmacy A,18.99
+Atorvastatin,Pharmacy B,17.50
+Atorvastatin,Pharmacy C,19.75
+Atorvastatin,MediMart,16.99
+Atorvastatin,HealthPlus,18.25
+Losartan,Pharmacy A,13.25
+Losartan,Pharmacy B,12.50
+Losartan,Pharmacy C,14.75
+Losartan,MediMart,11.99
+Losartan,HealthPlus,13.75 

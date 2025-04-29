@@ -1,0 +1,78 @@
+{
+    "ebf2378e-6a4e-4104-b1b9-cb9432eaecf0": {
+        "user_id": "ebf2378e-6a4e-4104-b1b9-cb9432eaecf0",
+        "name": "Nithiin",
+        "email": "psrinath821@gmail.com",
+        "password_hash": "8bb0cf6eb9b17d0f7d22b456f121257dc1254e1f01665370476383ea776df414",
+        "reminders": {
+            "Aspirin": "14:57"
+        },
+        "medications": [
+            "Aspirin"
+        ],
+        "price_checks": [
+            {
+                "medicine": "Ibuprofen",
+                "timestamp": "2025-04-29T15:07:44.293392",
+                "min_price": 13.99,
+                "max_price": 16.25
+            },
+            {
+                "medicine": "Paracetamol",
+                "timestamp": "2025-04-29T15:07:40.652791",
+                "min_price": 8.99,
+                "max_price": 11.5
+            },
+            {
+                "medicine": "Cetirizine",
+                "timestamp": "2025-04-29T15:07:40.650904",
+                "min_price": 5.49,
+                "max_price": 7.25
+            },
+            {
+                "medicine": "Ibuprofen",
+                "timestamp": "2025-04-29T15:07:40.648675",
+                "min_price": 13.99,
+                "max_price": 16.25
+            },
+            {
+                "medicine": "Omeprazole",
+                "timestamp": "2025-04-29T14:51:53.171801",
+                "min_price": 12.99,
+                "max_price": 15.5
+            },
+            {
+                "medicine": "Cetirizine",
+                "timestamp": "2025-04-29T14:51:53.168683",
+                "min_price": 5.49,
+                "max_price": 7.25
+            },
+            {
+                "medicine": "Atorvastatin",
+                "timestamp": "2025-04-29T14:51:53.164736",
+                "min_price": 16.99,
+                "max_price": 19.75
+            },
+            {
+                "medicine": "Metformin",
+                "timestamp": "2025-04-29T14:48:48.889190",
+                "min_price": 8.49,
+                "max_price": 10.5
+            },
+            {
+                "medicine": "Omeprazole",
+                "timestamp": "2025-04-29T14:48:42.109813",
+                "min_price": 12.99,
+                "max_price": 15.5
+            },
+            {
+                "medicine": "Amlodipine",
+                "timestamp": "2025-04-29T14:48:42.108670",
+                "min_price": 10.25,
+                "max_price": 12.25
+            }
+        ],
+        "streak_days": 0,
+        "email_notifications": true
+    }
+}
